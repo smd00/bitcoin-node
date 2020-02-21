@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # =============================================
+# Author: smd00
+# URL: https://github.com/smd00/parity-node
+# Cheat sheet: https://medium.com/@danielmontoyahd/cheat-sheet-parity-and-bitcoin-core-c370163fca44
+
 # Usage:
 # sudo chmod +x ./setup.sh
 # sudo ./setup.sh rcpUser rpcPassword your.redis.host
