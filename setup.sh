@@ -7,13 +7,12 @@
 
 # Usage:
 # sudo chmod +x ./setup.sh
-# sudo ./setup.sh rcpUser rpcPassword your.redis.host
+# sudo ./setup.sh rcpUser rpcPassword
 
 # =============================================
 # Install bitcoind
 sudo apt-add-repository ppa:bitcoin/bitcoin -y
 sudo apt update && sudo apt install bitcoind -y
-sudo apt install redis-tools -y
 
 # =============================================
 # Setup additional volume
@@ -33,7 +32,6 @@ sudo file -s /dev/xvdb #Check if the volume has any data
 # =============================================
 RPCUSER=$1
 RPCPASS=$2
-REDISHOST=$3
 
 # Copy config files
 sudo rm -rf $HOME/build && sudo mkdir -p $HOME/build
@@ -53,8 +51,6 @@ sudo chmod +x /btcdata/notify.sh
 sudo touch /btcdata/notify.log
 
 # =============================================
-sudo cp /etc/environment /etc/environment.bak
-echo "REDIS_HOST=$REDISHOST" | sudo tee -a /etc/environment #Make a new entry in /etc/environment
 sudo cp /etc/crontab /etc/crontab.bak
 echo "@reboot root bitcoind -daemon -datadir=/btcdata/" | sudo tee -a /etc/crontab #Make a new entry in /etc/crontab
 

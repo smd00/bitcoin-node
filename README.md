@@ -1,14 +1,16 @@
 # bitcoin-node
 
-## How to Install a Bitcoin Daemon
+## How to Install a Bitcoin node
 
-Bitcoin Daemon uses the RedisDB to push the wallet notification for the wallets that it is managing. 
-To setup the BitcoinD on a Ubuntu 18.04 server run the below command after copying this folder to the ubuntu server somewhere.
-
-Redis host will use default port.
+To setup a Bitcoin node on Ubuntu 18.04 follow these steps:
+- Copy files to server (i.e. SFTP via Filezilla)
+    - bitcoin.conf.tmpl
+    - notify.sh.tmpl
+    - setup.sh
+- Run the below commands
 
 ```
-chmod +x ./setup.sh && ./setup.sh <RPC-USERNAME> <RPC-PASSWORD> <REDIS-HOST>
+chmod +x ./setup.sh && ./setup.sh <RPC-USERNAME> <RPC-PASSWORD>
 ```
 
 ### Cheat Sheet: Parity Ethereum and Bitcoin Core:
