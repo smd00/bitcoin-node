@@ -3,10 +3,7 @@
 ## How to Install a Bitcoin node
 
 To setup a Bitcoin node on Ubuntu 18.04 follow these steps:
-- Copy files to server (i.e. SFTP via Filezilla)
-    - bitcoin.conf.tmpl
-    - notify.sh.tmpl
-    - setup.sh
+- Copy repository to server (i.e. SFTP via Filezilla)
 - Run the below commands
 
 ```
