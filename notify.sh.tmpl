@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# (Optional) - Replace with your own notification system
+
+echo "sadd smd00:btc:txids $1" | /usr/bin/redis-cli -h $REDIS_HOST
+
+echo "== SMD00: sadd smd00:btc:txids $1 | /usr/bin/redis-cli -h $REDIS_HOST" | sudo tee -a /btcdata/notify.log

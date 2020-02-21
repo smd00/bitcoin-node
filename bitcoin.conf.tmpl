@@ -1,0 +1,13 @@
+server=1
+daemon=1
+
+rpcuser=%RPCUSER%
+rpcpassword=%RPCPASS%
+
+rpcbind=0.0.0.0
+rpcport=8393
+
+rpcallowip=127.0.0.1 #(replace with your IP address)
+rpcallowip=192.168.0.0/16 #(replace with your IP range)
+
+walletnotify=/btcdata/notify.sh %s # Notify when receiving coins
